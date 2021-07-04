@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editTask } from "../JS/actions/actions";
-import { Modal, FormControl, Button } from "react-bootstrap";
+import { Modal, FormControl, Button, Form } from "react-bootstrap";
 import { VscEdit } from "react-icons/vsc";
-import "./todoEdit.css";
 
 const TodoEdit = ({ task }) => {
   const [show, setShow] = useState(false);
@@ -12,9 +11,10 @@ const TodoEdit = ({ task }) => {
 
   return (
     <div>
-      <VscEdit onClick={() => setShow(true)} size={20} />
+      <VscEdit onClick={() => setShow(true)} size={25} />
       <Modal show={show} onHide={() => setShow(false)}>
         <Modal.Body>
+        <Form.Label>Edit your task</Form.Label>
           <FormControl
             placeholder="edit your task"
             value={taskTodo}
@@ -24,7 +24,6 @@ const TodoEdit = ({ task }) => {
         <Modal.Footer>
           <Button
             variant="secondary"
-            style={{ width: "60px" }}
             onClick={() =>
               dispatch(editTask({ id: task.id, description: taskTodo }))
             }

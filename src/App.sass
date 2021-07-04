@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+$font-stack: italic bolder 90px 'Amatic SC', cursive;
+$color: #2dbbbb
+$radius: 5px
+$no-outline: none
+$no-border: none
+$border: 2px solid #2dbbbb
+$space: 10px
+$font: bolder 30px 'Amatic SC', cursive;
+
+html
+  background-image: url('background.jpg');
+
+.App 
+  background-image: url('background.jpg');
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font: $font
+  padding-bottom: 50px
+
+.App h1 
+  color: $color;
+  font: $font-stack;
+  padding: 60px;
+
+.todo, .main-container
+  margin: auto;
+  width: 65vw;
+
+.todo input
+  width: 60vw;
+  margin: auto 80px;
+  padding: $space;
+  border-radius: $radius;
+  border: $no-border;
+
+.todo input:focus, .add button:focus, .todo>button:focus
+  outline: $no-outline;
+
+.add
+  display: flex;
+  justify-content: center
+
+.add button
+  width: 110px;
+  background-color: $color
+  border-radius: $radius
+  border: $no-border;
+  font-weight: bold;
+
+.todo>button 
+  margin-top: 50px;
+  border: $border;
+  border-radius: $radius;
+  color: $color;
+  padding: $space;
+  background-color: transparent;
+  font-weight: bold;
+
+.list-container
+  display: flex;
+  width: 70vw;
+  justify-content: space-between
+  align-items: center;
+  margin-top: 50px;
+  background-color: $color;
+  padding: 15px;
+  border-radius: $radius;
+
+.left
+  display: flex
+  width: 70%;
+  justify-content: flex-start
+
+.right
+  display: flex
+  width: 30%;
+  justify-content: space-around
+
+.test-description
+  margin-left: 30px;
